@@ -26,13 +26,15 @@ ubuntu(){
 
 
 	}
-	## vscode, vim, pip3
+	## vscode, vim, pip3, eclipse, postman
 	pac2(){	
 
 		sudo snap install code --classic
 		sudo apt install vim -y
 		sudo apt-get -y install python3-pip
-		
+		sudo snap install eclipse --classic
+
+
 	}
 	#protonvpn
 	pac3(){
@@ -56,7 +58,7 @@ ubuntu(){
 	}
 
 	echo "1) chrome, spotify, discord"
-	echo "2) vscode, vim, pip3"
+	echo "2) vscode, vim, pip3, eclipse, postman"
 	echo "3) protonvpn"
 	echo "4) custom settings"
 	echo "5) all"
