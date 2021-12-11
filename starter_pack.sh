@@ -33,6 +33,7 @@ ubuntu(){
 		sudo apt install vim -y
 		sudo apt-get -y install python3-pip
 		sudo snap install eclipse --classic
+		sudo snap install postman
 
 
 	}
