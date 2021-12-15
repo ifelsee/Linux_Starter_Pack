@@ -34,7 +34,7 @@ ubuntu(){
 		sudo apt-get -y install python3-pip
 		sudo snap install eclipse --classic
 		sudo snap install postman
-
+		sudo apt install hexchat -y
 
 	}
 	#protonvpn
@@ -59,7 +59,7 @@ ubuntu(){
 	}
 
 	echo "1) chrome, spotify, discord"
-	echo "2) vscode, vim, pip3, eclipse, postman"
+	echo "2) vscode, vim, pip3, eclipse, postman, hexchat"
 	echo "3) protonvpn"
 	echo "4) custom settings"
 	echo "5) all"
