@@ -1,6 +1,6 @@
 protonvpn_(){ 
 	rm -rf protonvpn-stable-release_1.0.1-1_all.de*
-	wget protonvpn.deb https://protonvpn.com/download/protonvpn-stable-release_1.0.1-1_all.deb
+	wget https://protonvpn.com/download/protonvpn-stable-release_1.0.1-1_all.deb
 	sudo apt install ./protonvpn-stable-release_1.0.1-1_all.deb
 	rm -rf protonvpn-stable-release_1.0.1-1_all.de*
 	sudo apt-get update -y
@@ -39,10 +39,10 @@ ubuntu(){
 	}
 	#protonvpn
 	pac3(){
-	
-		if [ "$(dig +short www.protonvpn.com)" == "127.0.0.1" ]
+
+		if [ "$(dig +short www.protonvpn.com)" = 127.0.0.1 ]
 		then
-			if [ "$(cat /etc/hosts | grep "104.26.9.21" | wc -m )" == 0 ]
+			if [ "$(cat /etc/hosts | grep "104.26.9.21" | wc -m )" = 0 ]
 			then
 				sudo sh -c 'printf "\n# Protonvpn dns lookup\n104.26.9.21 repo.protonvpn.com \n185.159.159.140 protonvpn.com" >> /etc/hosts'
 				protonvpn_
@@ -56,6 +56,13 @@ ubuntu(){
 	#custom settings
 	pac4(){
 		echo "noting to do"
+	}
+	pac5(){
+		pac1
+		pac2
+		pac3
+		pac4
+		
 	}
 
 	echo "1) chrome, spotify, discord"
@@ -72,7 +79,7 @@ ubuntu(){
 		2) pac2;;
 		3) pac3;;
 		4) pac4;;
-		5) pac1 pac2 pac3 pac4;;
+		5) pac5;;
 		6) exit;
 	esac
 	echo "-------------------------"
